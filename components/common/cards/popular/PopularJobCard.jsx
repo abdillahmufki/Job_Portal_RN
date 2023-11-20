@@ -11,9 +11,9 @@ const PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
       <TouchableOpacity style={styles.logoContainer(selectedJob, item)}>
         <Image
           source={{
-            uri: checkImageURL(item.employer_logo)
+            uri: checkImageURL(item?.employer_logo)
               ? item.employer_logo
-              : "https://e7.pngegg.com/pngimages/459/80/png-clipart-computer-icons-employee-employees-icon-blue-text.png",
+              : "https://t4.ftcdn.net/jpg/05/05/61/73/360_F_505617309_NN1CW7diNmGXJfMicpY9eXHKV4sqzO5H.jpg",
           }}
           resizeMode="contain"
           style={styles.logoImage}
@@ -27,9 +27,11 @@ const PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
         <Text style={styles.jobName(selectedJob, item)} numberOfLines={1}>
           {item.job_title}
         </Text>
-        <Text style={styles.location} numberOfLines={1}>
-          {item.job_country}
-        </Text>
+        <View style={styles.infoWrapper}>
+          <Text style={styles.location} numberOfLines={1}>
+            {item.job_country}
+          </Text>
+        </View>
       </View>
     </TouchableOpacity>
   );

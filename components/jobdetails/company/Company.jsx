@@ -12,20 +12,20 @@ const Company = ({ companyLogo, jobTitle, companyName, location }) => {
         <Image
           source={{
             uri: checkImageURL(companyLogo)
-              ? employer_logo
-              : "https://e7.pngegg.com/pngimages/459/80/png-clipart-computer-icons-employee-employees-icon-blue-text.png",
+              ? companyLogo
+              : "https://t4.ftcdn.net/jpg/05/05/61/73/360_F_505617309_NN1CW7diNmGXJfMicpY9eXHKV4sqzO5H.jpg",
           }}
-          style={styles.logo}
+          style={styles.logoImage}
         />
       </View>
+
       <View style={styles.jobTitleBox}>
         <Text style={styles.jobTitle}>{jobTitle}</Text>
       </View>
 
-      <View style={styles.locationBox}>
+      <View style={styles.companyInfoBox}>
         <Text style={styles.companyName}>{companyName} / </Text>
-
-        <View style={styles.companyLocationBox}>
+        <View style={styles.locationBox}>
           <Image
             source={icons.location}
             resizeMode="contain"

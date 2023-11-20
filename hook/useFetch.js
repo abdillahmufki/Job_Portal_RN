@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 const useFetch = (endpoint, query) => {
@@ -26,7 +26,7 @@ const useFetch = (endpoint, query) => {
       setIsLoading(false);
     } catch (error) {
       setError(error);
-      alert("There is an error");
+      console.log(error);
     } finally {
       setIsLoading(false);
     }
